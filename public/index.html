@@ -27,9 +27,14 @@
                 { nombre: 'Jhoel' }
             );
 
-            socket.on('mensaje', function (payload) {
-                console.log('escuchando ',payload);
-            })
+            socket.on('nuevo-mensaje', function (payload) {
+                console.log('mensaje ', payload);
+            });
+            console.log('-------------------------------');
+            socket.on('active-bands', function (bandas) {
+                console.clear();
+                console.table(bandas);
+            });
         </script>
     </h1>
 </body>
